@@ -27,12 +27,12 @@ Danach im Browser `http://localhost:8000/` öffnen.
 1. Ein neues Repository auf GitHub anlegen, z. B. `panoramaview`.
 2. Den Inhalt dieses Ordners hochladen.
 3. Im Repository unter **Settings → Pages** als Quelle den Branch `main` und den Ordner `/ (root)` wählen.
-4. Nach ein bis zwei Minuten ist der Viewer erreichbar unter `https://DEIN-NAME.github.io/panoramaview/`.
+4. Nach ein bis zwei Minuten ist der Viewer erreichbar unter `https://ram1630.github.io/panoramaview/`.
 
 ## Einbetten
 
 ```html
-<iframe src="https://DEIN-NAME.github.io/panoramaview/?scene=berg&yaw=30"
+<iframe src="https://ram1630.github.io/panoramaview/?scene=berg&yaw=30"
         width="800" height="450" style="border:0" allowfullscreen loading="lazy"></iframe>
 ```
 
