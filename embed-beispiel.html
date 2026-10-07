@@ -19,18 +19,26 @@
   <h1>Panoramaview – Einbettungs-Beispiel</h1>
   <p>So sieht der Viewer aus, wenn er per <code>&lt;iframe&gt;</code> in eine fremde Webseite eingebettet wird.</p>
 
-  <h2>1. Mit Navigation</h2>
-  <div class="rahmen">
-    <iframe src="index.html?scene=berg" allowfullscreen loading="lazy" title="Bergstation"></iframe>
+  <h2>1. Empfohlen: flexibel, funktioniert auf jeder Webseite</h2>
+  <p>Bringt seine Gestaltung selbst mit, passt sich der Seitenbreite an (höchstens 900&nbsp;px, Format 16:9).</p>
+  <div style="position:relative; width:100%; max-width:900px; aspect-ratio:16/9; border-radius:12px; overflow:hidden;">
+    <iframe src="index.html?scene=berg&amp;nav=0&amp;autorotate=-2"
+            title="360°-Panorama der Bergstation"
+            style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+            allowfullscreen loading="lazy"></iframe>
   </div>
-  <pre>&lt;iframe src="https://ram1630.github.io/panoramaview/?scene=berg"
-        width="800" height="450" style="border:0" allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;</pre>
+  <pre>&lt;!-- 360°-Panorama von https://ram1630.github.io/panoramaview/ --&gt;
+&lt;div style="position:relative; width:100%; max-width:900px; aspect-ratio:16/9; border-radius:12px; overflow:hidden;"&gt;
+  &lt;iframe src="https://ram1630.github.io/panoramaview/?scene=berg&amp;amp;nav=0&amp;amp;autorotate=-2"
+          title="360°-Panorama der Bergstation"
+          style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+          allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
 
-  <h2>2. Ohne Navigation, mit automatischer Drehung</h2>
-  <div class="rahmen">
-    <iframe src="index.html?scene=berg&amp;nav=0&amp;autorotate=-3" allowfullscreen loading="lazy" title="Bergstation"></iframe>
-  </div>
-  <pre>&lt;iframe src="https://ram1630.github.io/panoramaview/?scene=berg&amp;nav=0&amp;autorotate=-3"
+  <h2>2. Einfach: feste Größe, mit Navigation</h2>
+  <p>Kürzer, aber auf dem Handy weniger flexibel.</p>
+  <iframe src="index.html?scene=berg" width="800" height="450" style="border:0; max-width:100%;" allowfullscreen loading="lazy" title="360°-Panorama der Bergstation"></iframe>
+  <pre>&lt;iframe src="https://ram1630.github.io/panoramaview/?scene=berg"
         width="800" height="450" style="border:0" allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;</pre>
 
   <h2>URL-Parameter</h2>

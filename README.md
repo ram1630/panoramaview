@@ -31,9 +31,17 @@ Danach im Browser `http://localhost:8000/` öffnen.
 
 ## Einbetten
 
+Dieser Code funktioniert auf jeder Webseite, weil er seine Gestaltung selbst mitbringt.
+Das Fenster passt sich der Seitenbreite an (höchstens 900 px, Format 16:9):
+
 ```html
-<iframe src="https://ram1630.github.io/panoramaview/?scene=berg&yaw=30"
-        width="800" height="450" style="border:0" allowfullscreen loading="lazy"></iframe>
+<!-- 360°-Panorama von https://ram1630.github.io/panoramaview/ -->
+<div style="position:relative; width:100%; max-width:900px; aspect-ratio:16/9; border-radius:12px; overflow:hidden;">
+  <iframe src="https://ram1630.github.io/panoramaview/?scene=berg&amp;nav=0&amp;autorotate=-2"
+          title="360°-Panorama der Bergstation"
+          style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+          allowfullscreen loading="lazy"></iframe>
+</div>
 ```
 
 Im Viewer erzeugt die Schaltfläche **</>** den passenden Code für die aktuelle Ansicht.
